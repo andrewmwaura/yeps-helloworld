@@ -27,8 +27,8 @@ const SectionListBasics = () => {
       <View style={styles.container}>
         <SectionList
           sections={[
-            {title: 'D', data: ['Devin', 'Dan', 'Dominic']},
-            {title: 'J', data: ['Jackson', 'James', 'Jillian', 'Jimmy', 'Joel', 'John', 'Julie']},
+            {title: 'D', data: ['David', 'Damian', 'Duncan']},
+            {title: 'J', data: ['Juliet', 'Jill', 'John', 'Jimmy', 'Joel', 'Julie']},
           ]}
           renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
           renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
