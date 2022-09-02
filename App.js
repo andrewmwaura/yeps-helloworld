@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import FlatListApp from './myimports/AppFlatList';
 
 const HelloWorldApp = () => {
   return (
@@ -14,5 +13,4 @@ const HelloWorldApp = () => {
     </View>
   )
 }
-// export default HelloWorldApp;
-export default FlatListApp;
+export default HelloWorldApp;
