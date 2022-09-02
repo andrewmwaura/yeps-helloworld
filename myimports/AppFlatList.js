@@ -1,17 +1,38 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 
-const FlatListApp = () => {
+const styles = StyleSheet.create({
+  container: {
+   flex: 1,
+   paddingTop: 22
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
+  },
+});
+
+const FlatListBasics = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center"
-      }}>
-      <Text>Hello, FlatListApp!</Text>
+    <View style={styles.container}>
+      <FlatList
+        data={[
+          {key: 'Mike'},
+          {key: 'Mary'},
+          {key: 'Lillian'},
+          {key: 'David'},
+          {key: 'Brian'},
+          {key: 'John'},
+          {key: 'Jillian'},
+          {key: 'Jimmy'},
+          {key: 'Julie'},
+        ]}
+        renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+      />
     </View>
-  )
+  );
 }
-export default FlatListApp;
+
+export default FlatListBasics;
