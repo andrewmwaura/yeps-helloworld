@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import Layout from './myimports/layouts';
+import DisplayAnImage from './myimports/images';
 
 const HelloWorldApp = () => {
   return (
@@ -15,4 +15,4 @@ const HelloWorldApp = () => {
   )
 }
 // export default HelloWorldApp;
-export default Layout;
+export default DisplayAnImage;
