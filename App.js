@@ -1,16 +1,40 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React from "react";
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
 
-const HelloWorldApp = () => {
-  return (
-    <View
-        style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center"
-      }}>
-      <Text>Hello, world!</Text>
-    </View>
-  )
+import HomeScreen from "./myimports/HomeScreen";
+import NewPost from "./myimports/newpost";
+// import SettingScreen from "./screens/SettingScreen";
+
+const AppNavigator = createStackNavigator(
+{
+	Home: HomeScreen,
+	User: NewPost,
+	// Setting: SettingScreen,
+},
+{
+	defaultNavigationOptions: {
+	headerStyle: {
+		backgroundColor: "#006600",
+	},
+	headerTitleStyle: {
+		fontWeight: "bold",
+		color: "#FFF",
+	},
+	headerTintColor: "#FFF",
+	},
+},
+{
+	initialRouteName: "Home",
 }
-export default HelloWorldApp;
+);
+
+const Navigator = createAppContainer(AppNavigator);
+
+export default function App() {
+return (
+	<Navigator>
+	<HomeScreen />
+	</Navigator>
+);
+}
