@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import FlatListBasics from './myimports/AppFlatList';
+import Layout from './myimports/layouts';
 
 const HelloWorldApp = () => {
   return (
@@ -15,4 +15,4 @@ const HelloWorldApp = () => {
   )
 }
 // export default HelloWorldApp;
-export default FlatListBasics;
+export default Layout;
