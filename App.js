@@ -3,13 +3,13 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
 import HomeScreen from "./myimports/HomeScreen";
-import NewPost from "./myimports/newpost";
+import User from "./myimports/newpost";
 // import SettingScreen from "./screens/SettingScreen";
 
 const AppNavigator = createStackNavigator(
 {
-	Home: HomeScreen,
-	User: NewPost,
+	Home: HomeScreen, 
+	User: User,
 	// Setting: SettingScreen,
 },
 {

@@ -28,8 +28,8 @@ return (
 };
 
 const HeaderButtonComponent = (props) => (
-<HeaderButton
-	IconComponent={Ionicons}
+<View
+	// IconComponent={Ionicons}
 	iconSize={23}
 	color="#FFF"
 	{...props}
@@ -40,13 +40,22 @@ Home.navigationOptions = (navData) => {
 return {
 	headerTitle: "Home",
 	headerRight: () => (
-	<HeaderButtons HeaderButtonComponent={HeaderButtonComponent}>
+	<View HeaderButtonComponent={HeaderButtonComponent}>
 		<Item
 		title="Setting"
 		iconName="ios-settings-outline"
 		onPress={() => navData.navigation.navigate("Setting")}
 		/>
-	</HeaderButtons>
+	</View>
+
+
+    // <HeaderButtons HeaderButtonComponent={HeaderButtonComponent}>
+	// 	<Item
+	// 	title="Setting"
+	// 	iconName="ios-settings-outline"
+	// 	onPress={() => navData.navigation.navigate("Setting")}
+	// 	/>
+	// </HeaderButtons>
 	),
 };
 };

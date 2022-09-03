@@ -1,22 +1,24 @@
 import React from "react";
 import { Text, View } from "react-native";
+// import { Ionicons } from "@expo/vector-icons";
 
-const NewPost = () => {
+const User = () => {
 return (
 	<View style={{ flex: 1, alignItems: "center",
 				justifyContent: "center" }}>
 	<Text style={{ color: "#006600", fontSize: 40 }}>
-		New Post Screen!
+		User Screen!
 	</Text>
-	<Text> Create New Post</Text> 
+	{/* <Ionicons name="ios-person-circle-outline" */}
+				{/* size={80} color="#006600" /> */}
 	</View>
 );
 };
 
-NewPost.navigationOptions = (navData) => {
+User.navigationOptions = (navData) => {
 return {
 	headerTitle: navData.navigation.getParam("username"),
 };
 };
 
-export default NewPost;
+export default User;
